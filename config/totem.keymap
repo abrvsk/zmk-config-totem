@@ -19,11 +19,9 @@
 #define NAV  1
 #define SYM  2
 #define ADJ  3
-#define TVP1 4
-#define TVP2 5
 
 &mt {
-    quick-tap-ms = <100>;
+    quick-tap-ms = <200>;
     global-quick-tap;
     flavor = "tap-preferred";
     tapping-term-ms = <170>;
@@ -57,7 +55,7 @@
             &kp Q       &kp W       &kp E        &kp R             &kp T            &kp Y      &kp U        &kp I        &kp O       &kp P
             &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G            &kp H      &mt RSHFT J  &mt RCTRL K  &mt RALT L  &mt RGUI SEMICOLON
 &kp ESCAPE  &kp Z       &kp X       &kp C        &kp V             &kp B            &kp N      &kp M        &kp COMMA    &kp DOT     &kp FSLH            &mt BACKSLASH SINGLE_QUOTE
-                                    &kp GRAVE    &lt 1 TAB         &kp BACKSPACE    &kp SPACE  &lt 2 ENTER  &sl 3
+                                    &kp GRAVE    &lt 1 TAB         &kp BACKSPACE    &kp SPACE  &lt 2 ENTER  &to 3
             >;
         };
 
@@ -79,11 +77,11 @@
             //                                     ┃           ┃    TAB    ┃    SPC    ┃   ┃    DEL    ┃     0     ┃           ┃
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
-            bindings = <
-            &none             &none                    &kp UP                 &none                 &kp LBRC                &kp RBRC               &kp N7        &kp N8        &kp N9        &kp MINUS
-            &kp LEFT_COMMAND  &mt LEFT_ALT LEFT_ARROW  &mt LEFT_CONTROL DOWN  &mt LEFT_SHIFT RIGHT  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp EQUAL
-&kp ESCAPE  &none             &kp PG_UP                &none                  &kp PG_DN             &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &trans
-                                                       &trans                 &trans                &trans                  &to 3                  &kp N0        &trans
+              bindings = <
+              &none             &none                    &kp UP                 &none                 &kp LBRC                &kp RBRC               &kp N7        &kp N8        &kp N9        &kp MINUS
+              &kp LEFT_COMMAND  &mt LEFT_ALT LEFT_ARROW  &mt LEFT_CONTROL DOWN  &mt LEFT_SHIFT RIGHT  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp EQUAL
+       &to 0  &none             &kp PG_UP                &none                  &kp PG_DN             &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &trans
+                                                         &trans                 &trans                &trans                  &to 3                  &kp N0        &trans
             >;
         };
 
