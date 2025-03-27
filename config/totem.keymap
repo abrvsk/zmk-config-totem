@@ -52,10 +52,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &kp Q       &kp W       &kp E        &kp R             &kp T            &kp Y      &kp U        &kp I        &kp O       &kp P
-            &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G            &kp H      &mt RSHFT J  &mt RCTRL K  &mt RALT L  &mt RGUI SEMICOLON
-&kp ESCAPE  &kp Z       &kp X       &kp C        &kp V             &kp B            &kp N      &kp M        &kp COMMA    &kp DOT     &kp FSLH            &mt BACKSLASH SINGLE_QUOTE
-                                    &kp GRAVE    &lt 1 TAB         &kp BACKSPACE    &kp SPACE  &lt 2 ENTER  &to 3
+            &kp Q       &kp W       &kp E        &kp R             &kp T            &kp Y      &kp U        &kp I          &kp O       &kp P
+            &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G            &kp H      &mt RSHFT J  &mt RCTRL K    &mt RALT L  &mt RGUI SEMICOLON
+&kp ESCAPE  &kp Z       &kp X       &kp C        &kp V             &kp B            &kp N      &kp M        &kp COMMA      &kp DOT     &kp FSLH            &kp SINGLE_QUOTE
+                                    &kp GRAVE    &lt 1 TAB         &kp BACKSPACE    &kp SPACE  &lt 2 ENTER  &kp BACKSLASH
             >;
         };
 
@@ -81,7 +81,7 @@
        &none             &kp HOME                 &kp UP                 &kp END               &kp LBRC                &kp RBRC               &kp N7                    &kp N8                      &kp N9                  &kp MINUS
        &kp LEFT_COMMAND  &mt LEFT_ALT LEFT_ARROW  &mt LEFT_CONTROL DOWN  &mt LEFT_SHIFT RIGHT  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &mt RIGHT_SHIFT NUMBER_4  &mt RIGHT_CONTROL NUMBER_5  &mt RIGHT_ALT NUMBER_6  &mt RIGHT_COMMAND EQUAL
 &to 0  &none             &kp PG_UP                &none                  &kp PG_DN             &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &kp NUMBER_1              &kp NUMBER_2                &kp NUMBER_3            &kp SLASH                &trans
-                                                  &trans                 &trans                &trans                  &to 3                  &kp N0                    &trans
+                                                  &trans                 &trans                &trans                  &kp COMMA              &kp N0                    &kp DOT
             >;
         };
 
@@ -104,39 +104,14 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp EXCL     &kp AT       &kp HASH    &kp DLLR              &kp PRCNT               &kp CARET     &kp AMPS        &kp RA(U)   &kp SQT     &kp DQT
-       &kp RA(A)    &trans       &kp RA(S)   &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC    &kp C_MUTE    &kp LS(RA(N4))  &kp RA(N5)  &kp RA(N4)  &kp RA(O)
-&to 0  &kp RA(F18)  &kp RA(F19)  &kp K_MUTE  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP         &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV  &kp C_NEXT  &kp BSLH   &trans
-                                 &kp C_PREV  &kp C_PP              &kp C_NEXT              &trans        &trans          &trans
+       &trans  &trans  &trans      &trans                &trans                  &trans        &trans        &out OUT_TOG  &trans        &bt BT_CLR_ALL
+       &trans  &trans  &trans      &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC    &bt BT_PRV    &bt BT_NXT    &trans        &trans        &bt BT_CLR
+&to 0  &trans  &trans  &kp K_MUTE  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans          &trans
+                       &kp C_PREV  &kp C_PP              &kp C_NEXT              &trans        &trans        &trans
             >;
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
-        adjust_layer {
-            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-
-            label = "ADJ";
-
-            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-            //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-            //             ┃   RESET   ┃ BT CLEAR  ┃  OUT TOG  ┃           ┃           ┃   ┃           ┃    F7     ┃    F8     ┃    F9     ┃    F12    ┃
-            //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-            //             ┃ BOOTLOAD  ┃ BT NEXT   ┃           ┃           ┃           ┃   ┃           ┃    F4     ┃    F5     ┃    F6     ┃    F11    ┃
-            // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-            // ┃           ┃           ┃ BT PREV   ┃           ┃           ┃           ┃   ┃           ┃    F1     ┃    F2     ┃    F3     ┃    F10    ┃           ┃
-            // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-            //                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
-            //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-
-            bindings = <
-       &sys_reset   &none  &out OUT_TOG  &bt BT_CLR  &bt BT_CLR_ALL    &trans  &none   &none   &none  &none
-       &bootloader  &none  &trans        &bt BT_NXT  &trans            &trans  &none   &none   &none  &none
-&to 0  &trans       &none  &trans        &bt BT_PRV  &trans            &trans  &none   &none   &none  &none  &trans
-                           &trans        &trans      &trans            &trans  &trans  &trans
-            >;
-        };
-
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
     };
