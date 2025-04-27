@@ -15,6 +15,16 @@ TOTEM is a 38 key column-staggered split keyboard running [ZMK](https://zmk.dev/
 ![TOTEM layout](/docs/images/TOTEM_layout.svg)
 
 
+## CURRENT VERSION
+
+Files in this repo will build 4 firmware files:
+- settings_reset
+- dongle
+- left
+- right
+Before flashing make sure to use `settings_reset` on every board, otherwise they won't be able to pair on the first use.
+Without dongle BT status would show the battery level of the left half only, which was draining in about 3 weeks as it constantly listens for the right half.
+With the dongle connected, BT status (presumably) shows the average of battery levels for both halves, which should not drain in 2-3 months. Fingers crossed!
 
 ## HOW TO USE
 
