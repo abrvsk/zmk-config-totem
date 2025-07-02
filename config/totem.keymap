@@ -52,10 +52,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &kp Q       &kp W       &kp E        &kp R             &kp T            &kp Y      &kp U        &kp I          &kp O       &kp P
-            &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G            &kp H      &mt RSHFT J  &mt RCTRL K    &mt RALT L  &mt RGUI SEMICOLON
-&kp ESCAPE  &kp Z       &kp X       &kp C        &kp V             &kp B            &kp N      &kp M        &kp COMMA      &kp DOT     &kp FSLH            &kp SINGLE_QUOTE
-                                    &kp GRAVE    &lt 1 TAB         &kp BACKSPACE    &kp SPACE  &lt 2 ENTER  &kp BACKSLASH
+                     &kp Q       &kp W       &kp E        &kp R             &kp T            &kp Y      &kp U        &kp I          &kp O       &kp P
+                     &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G            &kp H      &mt RSHFT J  &mt RCTRL K    &mt RALT L  &mt RGUI SEMICOLON
+&mt LEFT_GUI ESCAPE  &kp Z       &kp X       &kp C        &kp V             &kp B            &kp N      &kp M        &kp COMMA      &kp DOT     &kp FSLH            &kp SINGLE_QUOTE
+                                             &kp GRAVE    &lt 1 TAB         &kp BACKSPACE    &kp SPACE  &lt 2 ENTER  &kp BACKSLASH
             >;
         };
 
@@ -80,7 +80,7 @@
             bindings = <
        &none             &kp HOME                 &kp UP                 &kp END               &kp LBRC                &kp RBRC               &kp N7                    &kp N8                      &kp N9                  &kp MINUS
        &kp LEFT_COMMAND  &mt LEFT_ALT LEFT_ARROW  &mt LEFT_CONTROL DOWN  &mt LEFT_SHIFT RIGHT  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &mt RIGHT_SHIFT NUMBER_4  &mt RIGHT_CONTROL NUMBER_5  &mt RIGHT_ALT NUMBER_6  &mt RIGHT_COMMAND EQUAL
-&to 0  &none             &kp PG_UP                &none                  &kp PG_DN             &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &kp NUMBER_1              &kp NUMBER_2                &kp NUMBER_3            &kp SLASH                &trans
+&to 0  &kp LEFT_ALT      &kp PG_UP                &none                  &kp PG_DN             &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &kp NUMBER_1              &kp NUMBER_2                &kp NUMBER_3            &kp SLASH                &trans
                                                   &trans                 &trans                &trans                  &kp COMMA              &kp N0                    &kp DOT
             >;
         };
